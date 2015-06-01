@@ -29,7 +29,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   //Register tasks
-  // grunt.registerTask('default', ['jshint', 'concat', 'copy']);
-  grunt.registerTask('default', ['concat', 'copy']);
+  grunt.registerTask('default', ['jshint', 'concat', 'copy']);
+  // grunt.registerTask('default', ['concat', 'copy']);
+
 
 };
