@@ -13,23 +13,29 @@ function getPhoneNumber(userName) {
   return phoneNumber;
 }
 
-
 function getLocation(phoneNumber) {
+  var phoneNumberPattern = /(?:1-)?\(?(\d{3})[\-\)]\d{3}-\d{4}/;
   var phoneMatches = phoneNumberPattern.exec(phoneNumber);
-  var areaCode, areaCodes, locationName;
-  if (phoneMatches) {
+  if (phoneNumber) {
     areaCode = phoneMatches[1];
     areaCodes = getAreaCodes();
     locationName = areaCodes[areaCode];
+  } else {
+    console.log("Phone number issue");
   }
-  return locationName ? locationName: 'somewhere';
+  return locationName ? locationName : 'somewhere';
+}
+
+function replaceFBDisplay() {
+  var output = '<h1>Hello, ' + userName + '!</h1>';
+  var newOutput = output + '<p>' + kbValues.projectName + ' ' + kbValues.versionNumber + ' viewed on: ' + kbValues.currentTime + ' how is the weather in ' + locationName + '?' + '</p>';
+  document.body.innerHTML = newOutput;
 }
 
 getUserName();
 getPhoneNumber(userName);
-validatePhoneNumber(phoneNumber);
 getLocation(phoneNumber);
-
+replaceFBDisplay();
 
 // vv Before encapsulation
 
