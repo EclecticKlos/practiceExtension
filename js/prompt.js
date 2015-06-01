@@ -1,3 +1,22 @@
+function getUserName() {
+  var userName = prompt('Hello, what\
+    s your name?;')
+
+  if (!userName) {
+    userName = prompt('You didn\'t enter a name. Really, what\'s your name?');
+  }
+  return userName;
+}
+
+function getPhoneNumber(userName) {
+  var phoneNumber = prompt('Hello ' + userName +', what\'s your phone number?');
+
+  if(!validatePhoneNumber)
+}
+
+
+
+// vv Before encapsulation
 
 var userName = prompt('Hello, what\'s your name?');
 var phoneNumber = prompt('Hello '+ userName + ', what is your phone number?');
