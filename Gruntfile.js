@@ -12,12 +12,12 @@ module.exports = function(grunt) {
         dest: 'release/main.js'
       }
     },
-    // jshint: {
-    //   files: ['js/values.js', 'js/prompt.js', 'js/getImages.js', 'js/events.js']
-    // },
+    jshint: {
+      files: ['js/values.js', 'js/prompt.js', 'js/getImages.js', 'js/events.js', 'manifest.json']
+    },
     watch: {
-      // files: ['<%= jshint.files %>', 'manifest.json'],
-      files: ['js/values.js', 'js/prompt.js', 'js/getImages.js', 'js/events.js', 'manifest.json'],
+      files: ['<%= jshint.files %>', 'manifest.json'],
+      // files: ['js/values.js', 'js/prompt.js', 'js/getImages.js', 'js/events.js', 'manifest.json'],
       tasks: ['default']
     },
   });

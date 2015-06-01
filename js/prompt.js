@@ -11,7 +11,7 @@ function getUserName() {
 function getPhoneNumber(userName) {
   var phoneNumber = prompt('Hello ' + userName +', what\'s your phone number?');
 
-  if(!validatePhoneNumber)
+  return phoneNumber;
 }
 
 
