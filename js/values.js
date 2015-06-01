@@ -9,11 +9,8 @@ var makeCurrentTime = function() {
   return timeNow;
 };
 
-var kbValues = {
-  projectName: 'kittenbook',
-  versionNumber: '0.0.1',
-  currentTime: makeCurrentTime(),
-  areaCodes: {
+function getAreaCodes() {
+   areaCodes = {
     '408': 'Silicon Valley',
     '702': 'Las Vegas',
     '801': 'Northern Utah',
@@ -21,5 +18,12 @@ var kbValues = {
     '901': 'Memphis',
     '507': 'Rochester, MN',
     '734': 'Ann Arbor, MI',
-  }
+  };
+  return areaCodes;
+}
+
+var kbValues = {
+  projectName: 'kittenbook',
+  versionNumber: '0.0.1',
+  currentTime: makeCurrentTime(),
 };

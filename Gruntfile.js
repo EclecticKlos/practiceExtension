@@ -12,12 +12,12 @@ module.exports = function(grunt) {
         dest: 'release/main.js'
       }
     },
-    // jshint: {
-    //   files: ['js/values.js', 'js/prompt.js', 'js/getImages.js', 'js/events.js']
-    // },
+    jshint: {
+      files: ['js/values.js', 'js/prompt.js', 'js/getImages.js', 'js/events.js', 'manifest.json']
+    },
     watch: {
-      // files: ['<%= jshint.files %>', 'manifest.json'],
-      files: ['js/values.js', 'js/prompt.js', 'js/getImages.js', 'js/events.js', 'manifest.json'],
+      files: ['<%= jshint.files %>', 'manifest.json'],
+      // files: ['js/values.js', 'js/prompt.js', 'js/getImages.js', 'js/events.js', 'manifest.json'],
       tasks: ['default']
     },
   });
@@ -29,7 +29,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   //Register tasks
-  // grunt.registerTask('default', ['jshint', 'concat', 'copy']);
-  grunt.registerTask('default', ['concat', 'copy']);
+  grunt.registerTask('default', ['jshint', 'concat', 'copy']);
+  // grunt.registerTask('default', ['concat', 'copy']);
+
 
 };
